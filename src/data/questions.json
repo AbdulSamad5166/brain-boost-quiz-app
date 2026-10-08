@@ -1,0 +1,87 @@
+[
+  {
+    "id": 1,
+    "category": "Geography",
+    "icon": "🌍",
+    "question": "What is the capital of France?",
+    "options": ["London", "Paris", "Berlin", "Madrid"],
+    "correctAnswer": "Paris"
+  },
+  {
+    "id": 2,
+    "category": "Science",
+    "icon": "🔬",
+    "question": "Which planet is known as the Red Planet?",
+    "options": ["Venus", "Mars", "Jupiter", "Mercury"],
+    "correctAnswer": "Mars"
+  },
+  {
+    "id": 3,
+    "category": "Science",
+    "icon": "🔬",
+    "question": "Which gas do plants absorb from the atmosphere for photosynthesis?",
+    "options": ["Oxygen", "Nitrogen", "Carbon dioxide", "Hydrogen"],
+    "correctAnswer": "Carbon dioxide"
+  },
+  {
+    "id": 4,
+    "category": "History",
+    "icon": "🏛️",
+    "question": "In which year did World War II end?",
+    "options": ["1918", "1939", "1945", "1963"],
+    "correctAnswer": "1945"
+  },
+  {
+    "id": 5,
+    "category": "Geography",
+    "icon": "🌍",
+    "question": "What is the largest ocean on Earth?",
+    "options": ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
+    "correctAnswer": "Pacific Ocean"
+  },
+  {
+    "id": 6,
+    "category": "Technology",
+    "icon": "💻",
+    "question": "What does HTML stand for?",
+    "options": [
+      "HyperText Markup Language",
+      "High Tech Modern Language",
+      "HyperTransfer Markup Logic",
+      "Home Tool Markup Language"
+    ],
+    "correctAnswer": "HyperText Markup Language"
+  },
+  {
+    "id": 7,
+    "category": "Science",
+    "icon": "🔬",
+    "question": "What is the chemical symbol for gold?",
+    "options": ["Ag", "Au", "Gd", "Go"],
+    "correctAnswer": "Au"
+  },
+  {
+    "id": 8,
+    "category": "Art",
+    "icon": "🎨",
+    "question": "Who painted the Mona Lisa?",
+    "options": ["Michelangelo", "Vincent van Gogh", "Leonardo da Vinci", "Pablo Picasso"],
+    "correctAnswer": "Leonardo da Vinci"
+  },
+  {
+    "id": 9,
+    "category": "Technology",
+    "icon": "💻",
+    "question": "Which company originally created the React library?",
+    "options": ["Google", "Microsoft", "Facebook (Meta)", "Twitter"],
+    "correctAnswer": "Facebook (Meta)"
+  },
+  {
+    "id": 10,
+    "category": "Geography",
+    "icon": "🌍",
+    "question": "How many continents are there on Earth?",
+    "options": ["5", "6", "7", "8"],
+    "correctAnswer": "7"
+  }
+]

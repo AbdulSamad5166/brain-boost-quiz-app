@@ -1,0 +1,70 @@
+/* =========================================================
+   THEME COLORS: sirf yahan se colors badlo, poori app badal jayegi
+   ========================================================= */
+:root {
+  /* Page background (gradient) */
+  --bg-gradient: linear-gradient(135deg, #0f766e 0%, #0e7490 50%, #1e3a8a 100%);
+
+  /* Card aur surfaces */
+  --color-card: #ffffff;
+  --color-surface: #f8fafc;
+  --color-border: #e2e8f0;
+  --color-track: #e2e8f0;
+
+  /* Text */
+  --color-heading: #134e4a;
+  --color-text: #0f172a;
+  --color-text-muted: #475569;
+
+  /* Primary (buttons, progress, timer, highlights) */
+  --color-primary: #0d9488;
+  --color-primary-dark: #0f766e;
+  --color-primary-soft: #ccfbf1;
+  --gradient-primary: linear-gradient(135deg, #14b8a6, #0284c7);
+  --shadow-primary: rgba(13, 148, 136, 0.4);
+
+  /* Secondary (info badges, category badge, secondary button) */
+  --color-secondary: #3b82f6;
+  --color-secondary-soft: #dbeafe;
+  --color-secondary-text: #1e40af;
+
+  /* Accent (score badge, time's up, decorative dots) */
+  --color-accent: #f59e0b;
+  --color-accent-soft: #fef3c7;
+  --color-accent-text: #92400e;
+
+  /* Correct / Incorrect */
+  --color-success: #10b981;
+  --color-success-soft: #d1fae5;
+  --color-success-text: #065f46;
+  --color-danger: #ef4444;
+  --color-danger-soft: #fee2e2;
+  --color-danger-text: #991b1b;
+
+  /* Result screen levels */
+  --level-excellent: #10b981;
+  --level-great: #0d9488;
+  --level-good: #f59e0b;
+  --level-low: #ef4444;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--color-text);
+  min-height: 100vh;
+  background: var(--bg-gradient);
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}

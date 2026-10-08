@@ -1,0 +1,545 @@
+/* =========================================================
+   App.css: koi hard-coded color nahi, sab index.css ke variables se aata hai
+   ========================================================= */
+
+/* ---------- Card ---------- */
+.card {
+  width: 100%;
+  max-width: 520px;
+  background: var(--color-card);
+  border-radius: 24px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+/* ---------- Start screen ---------- */
+.start-illustration {
+  width: 180px;
+  margin: 0 auto 1.5rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.start-illustration svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* StartScreen.jsx ke SVG ke colors bhi theme se (JSX badalne ki zarurat nahi) */
+.start-illustration stop:nth-of-type(1) { stop-color: #14b8a6; }
+.start-illustration stop:nth-of-type(2) { stop-color: #0284c7; }
+.start-illustration circle:nth-of-type(2) { fill: var(--color-accent); }
+.start-illustration circle:nth-of-type(3) { fill: var(--color-success); }
+.start-illustration circle:nth-of-type(4) { fill: var(--color-secondary); }
+
+.start-screen h1 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-heading);
+}
+
+.start-description {
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.quiz-info {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.quiz-info li {
+  background: var(--color-primary-soft);
+  color: var(--color-primary-dark);
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* ---------- Button ---------- */
+.btn {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 0.9rem 2.2rem;
+  border-radius: 999px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-primary {
+  color: #ffffff;
+  background: var(--gradient-primary);
+  box-shadow: 0 8px 20px var(--shadow-primary);
+}
+
+.btn-secondary {
+  color: var(--color-primary-dark);
+  background: var(--color-primary-soft);
+}
+
+/* ---------- Quiz screen ---------- */
+.quiz-screen {
+  text-align: left;
+}
+
+.quiz-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.quiz-header-title {
+  font-weight: 700;
+  color: var(--color-heading);
+}
+
+.quiz-header-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.question-counter {
+  background: var(--color-primary-soft);
+  color: var(--color-primary-dark);
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.score-badge {
+  background: var(--color-accent-soft);
+  color: var(--color-accent-text);
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ---------- Progress bar ---------- */
+.progress-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.progress-track {
+  flex: 1;
+  height: 12px;
+  background: var(--color-track);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--gradient-primary);
+  border-radius: 999px;
+  transition: width 0.5s ease;
+}
+
+.progress-label {
+  min-width: 3rem;
+  text-align: right;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}
+
+/* ---------- Timer ---------- */
+.timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  color: var(--color-primary-dark);
+  transition: color 0.3s ease;
+}
+
+.timer-circle {
+  position: relative;
+  width: 56px;
+  height: 56px;
+}
+
+.timer-svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.timer-track,
+.timer-ring {
+  fill: none;
+  stroke-width: 4;
+}
+
+.timer-track {
+  stroke: var(--color-track);
+}
+
+.timer-ring {
+  stroke: var(--color-primary);
+  transition: stroke-dashoffset 1s linear, stroke 0.3s ease;
+}
+
+.timer-number {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.timer-label {
+  font-weight: 600;
+}
+
+.timer-danger {
+  color: var(--color-danger);
+}
+
+.timer-danger .timer-ring {
+  stroke: var(--color-danger);
+}
+
+/* ---------- Question card ---------- */
+.category-badge {
+  display: inline-block;
+  background: var(--color-secondary-soft);
+  color: var(--color-secondary-text);
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.9rem;
+}
+
+.question-text {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+}
+
+.answer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* ---------- Answer option ---------- */
+.answer-option {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  text-align: left;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: 14px;
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease,
+    transform 0.15s ease;
+}
+
+.answer-option:hover:not(:disabled) {
+  border-color: var(--color-primary);
+  background: var(--color-primary-soft);
+  transform: translateX(4px);
+}
+
+.answer-option:disabled {
+  cursor: default;
+}
+
+.answer-letter {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--color-primary-soft);
+  color: var(--color-primary-dark);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.answer-option.correct {
+  border-color: var(--color-success);
+  background: var(--color-success-soft);
+  color: var(--color-success-text);
+  animation: pop 0.3s ease;
+}
+
+.answer-option.correct .answer-letter {
+  background: var(--color-success);
+  color: #ffffff;
+}
+
+.answer-option.incorrect {
+  border-color: var(--color-danger);
+  background: var(--color-danger-soft);
+  color: var(--color-danger-text);
+  animation: shake 0.4s ease;
+}
+
+.answer-option.incorrect .answer-letter {
+  background: var(--color-danger);
+  color: #ffffff;
+}
+
+.answer-option.dimmed {
+  opacity: 0.55;
+}
+
+.answer-icon {
+  margin-left: auto;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* ---------- Feedback + actions ---------- */
+.feedback {
+  margin-top: 1.25rem;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.feedback-correct {
+  background: var(--color-success-soft);
+  color: var(--color-success-text);
+}
+
+.feedback-incorrect {
+  background: var(--color-danger-soft);
+  color: var(--color-danger-text);
+}
+
+.feedback-timeup {
+  background: var(--color-accent-soft);
+  color: var(--color-accent-text);
+}
+
+.quiz-actions {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+/* ---------- Loading / Error / Empty screens ---------- */
+.status-screen h1 {
+  font-size: 1.6rem;
+  color: var(--color-heading);
+  margin-bottom: 0.75rem;
+}
+
+.status-message {
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.status-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.message-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
+.spinner {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 1.5rem;
+  border: 6px solid var(--color-primary-soft);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+
+/* ---------- Result screen ---------- */
+.result-screen h1 {
+  font-size: 1.8rem;
+  color: var(--color-heading);
+  margin-bottom: 1.25rem;
+}
+
+.result-ring-wrapper {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 1.25rem;
+}
+
+.result-ring-svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.result-ring-track,
+.result-ring-fill {
+  fill: none;
+  stroke-width: 10;
+  stroke-linecap: round;
+}
+
+.result-ring-track {
+  stroke: var(--color-track);
+}
+
+.result-ring-fill {
+  stroke: var(--color-primary);
+  animation: fill-ring 1.2s ease-out;
+}
+
+.result-ring-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-score {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.result-score-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.result-title {
+  font-size: 1.5rem;
+  color: var(--color-text);
+  margin-bottom: 0.4rem;
+}
+
+.result-message {
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.result-excellent .result-ring-fill { stroke: var(--level-excellent); }
+.result-great .result-ring-fill     { stroke: var(--level-great); }
+.result-good .result-ring-fill      { stroke: var(--level-good); }
+.result-low .result-ring-fill       { stroke: var(--level-low); }
+
+/* ---------- Stat boxes ---------- */
+.result-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.stat-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.9rem 0.5rem;
+  border-radius: 14px;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.stat-correct   { background: var(--color-success-soft);   color: var(--color-success-text); }
+.stat-incorrect { background: var(--color-danger-soft);    color: var(--color-danger-text); }
+.stat-accuracy  { background: var(--color-secondary-soft); color: var(--color-secondary-text); }
+
+/* ---------- Animations ---------- */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+
+@keyframes pop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25%      { transform: translateX(-6px); }
+  75%      { transform: translateX(6px); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fill-ring {
+  from { stroke-dashoffset: var(--ring-length); }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 480px) {
+  .card {
+    padding: 2rem 1.25rem;
+  }
+
+  .start-screen h1 {
+    font-size: 1.6rem;
+  }
+
+  .result-ring-wrapper {
+    width: 150px;
+    height: 150px;
+  }
+
+  .result-score {
+    font-size: 1.8rem;
+  }
+}
