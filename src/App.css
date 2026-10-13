@@ -9,7 +9,7 @@
   background: var(--color-card);
   border-radius: 24px;
   padding: 2.5rem 2rem;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 20px 50px rgba(30, 27, 75, 0.24);
   text-align: center;
 }
 
@@ -27,8 +27,8 @@
 }
 
 /* StartScreen.jsx ke SVG ke colors bhi theme se (JSX badalne ki zarurat nahi) */
-.start-illustration stop:nth-of-type(1) { stop-color: #14b8a6; }
-.start-illustration stop:nth-of-type(2) { stop-color: #0284c7; }
+.start-illustration stop:nth-of-type(1) { stop-color: var(--color-primary); }
+.start-illustration stop:nth-of-type(2) { stop-color: var(--color-secondary); }
 .start-illustration circle:nth-of-type(2) { fill: var(--color-accent); }
 .start-illustration circle:nth-of-type(3) { fill: var(--color-success); }
 .start-illustration circle:nth-of-type(4) { fill: var(--color-secondary); }

@@ -3,49 +3,49 @@
    ========================================================= */
 :root {
   /* Page background (gradient) */
-  --bg-gradient: linear-gradient(135deg, #0f766e 0%, #0e7490 50%, #1e3a8a 100%);
+  --bg-gradient: linear-gradient(135deg, #071426 0%, #0b1f3a 55%, #102e4f 100%);
 
   /* Card aur surfaces */
-  --color-card: #ffffff;
-  --color-surface: #f8fafc;
-  --color-border: #e2e8f0;
-  --color-track: #e2e8f0;
+  --color-card: #10233d;
+  --color-surface: #162d4b;
+  --color-border: #304766;
+  --color-track: #304766;
 
   /* Text */
-  --color-heading: #134e4a;
-  --color-text: #0f172a;
-  --color-text-muted: #475569;
+  --color-heading: #f8fafc;
+  --color-text: #f8fafc;
+  --color-text-muted: #c4d0df;
 
   /* Primary (buttons, progress, timer, highlights) */
-  --color-primary: #0d9488;
-  --color-primary-dark: #0f766e;
-  --color-primary-soft: #ccfbf1;
-  --gradient-primary: linear-gradient(135deg, #14b8a6, #0284c7);
-  --shadow-primary: rgba(13, 148, 136, 0.4);
+  --color-primary: #a78bfa;
+  --color-primary-dark: #c4b5fd;
+  --color-primary-soft: #302653;
+  --gradient-primary: linear-gradient(135deg, #8b5cf6, #4f7de8);
+  --shadow-primary: rgba(79, 70, 229, 0.35);
 
   /* Secondary (info badges, category badge, secondary button) */
-  --color-secondary: #3b82f6;
-  --color-secondary-soft: #dbeafe;
-  --color-secondary-text: #1e40af;
+  --color-secondary: #22d3ee;
+  --color-secondary-soft: #123b50;
+  --color-secondary-text: #a5f3fc;
 
   /* Accent (score badge, time's up, decorative dots) */
-  --color-accent: #f59e0b;
-  --color-accent-soft: #fef3c7;
-  --color-accent-text: #92400e;
+  --color-accent: #fbbf24;
+  --color-accent-soft: #49371b;
+  --color-accent-text: #fde68a;
 
   /* Correct / Incorrect */
-  --color-success: #10b981;
-  --color-success-soft: #d1fae5;
-  --color-success-text: #065f46;
-  --color-danger: #ef4444;
-  --color-danger-soft: #fee2e2;
-  --color-danger-text: #991b1b;
+  --color-success: #4ade80;
+  --color-success-soft: #153d32;
+  --color-success-text: #bbf7d0;
+  --color-danger: #fb7185;
+  --color-danger-soft: #482531;
+  --color-danger-text: #fecdd3;
 
   /* Result screen levels */
-  --level-excellent: #10b981;
-  --level-great: #0d9488;
-  --level-good: #f59e0b;
-  --level-low: #ef4444;
+  --level-excellent: #4ade80;
+  --level-great: #a78bfa;
+  --level-good: #fbbf24;
+  --level-low: #fb7185;
 }
 
 * {
